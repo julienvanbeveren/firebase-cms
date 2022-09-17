@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import React from "react";
 
 interface LinkProps {
-  icon: React.ReactElement;
+  icon?: React.ReactElement;
   text: string;
   event: string | Function;
   active?: boolean;

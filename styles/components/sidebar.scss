@@ -6,7 +6,7 @@
   background-color: var(--secondary-bg-clr);
   height: 100%;
   width: 210px;
-  padding: .8rem;
+  padding: 1rem .8rem;
   border-right: 1px solid var(--hover-gray);
 
   .upper {
@@ -84,5 +84,19 @@
   &.active {
     background-color: var(--accent-clr-soft);
     color: var(--accent-clr);
+  }
+}
+
+.extended-sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  border-right: 1px solid var(--hover-gray);
+  height: 100%;
+  padding: 1rem 1rem;
+
+  h1.title {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
   }
 }
