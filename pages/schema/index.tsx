@@ -1,8 +1,8 @@
 import { NextPage } from "next";
 import Head from "next/head";
 
-const Home: NextPage = () => {
+const Schema: NextPage = () => {
   return <></>;
 };
 
-export default Home;
+export default Schema;

@@ -1,8 +1,19 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/normalize.scss";
+import "../styles/variables.scss";
+import "../styles/globals.scss";
+import "../styles/components/sidebar.scss";
+import { AppProps } from "next/app";
+import Sidebar from "../components/sidebar/Sidebar";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <div className="app-wrapper">
+      <Sidebar />
+      <main>
+        <Component {...pageProps} />
+      </main>
+    </div>
+  );
 }
 
-export default MyApp
+export default MyApp;
