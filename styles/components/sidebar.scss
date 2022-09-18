@@ -90,6 +90,7 @@
 .extended-sidebar {
   display: flex;
   flex-direction: column;
+  gap: 5px;
   width: 260px;
   border-right: 1px solid var(--hover-gray);
   height: 100%;

@@ -3,21 +3,38 @@ export interface Schema {
   fields: Field[]
 }
 
-type Field = StringField
+type Field = StringField | NumberField
 
 interface DefaultField {
   id: string,
   displayName: string,
   description?: string,
-  validation?: Validation
+  validation?: Validation,
+  interface?: {
+    visible: boolean,
+    width: number,
+  }
 }
 
 interface Validation {
   required?: boolean,
   unique?: boolean,
-  validateFunc?: (input: string) => boolean
 }
 
 interface StringField extends DefaultField {
-  type: "Single Line" | "Multi Line" | "Markdown" | "Slug"
+  type: "Single Line" | "Multi Line" | "Markdown" | "Slug",
+  validation: StringValidation
+}
+
+interface NumberField extends DefaultField {
+  type: "Number",
+  validation: NumberValidation
+}
+
+interface NumberValidation extends Validation {
+  validateFunc?: (input: number) => boolean
+}
+
+interface StringValidation extends Validation {
+  validateFunc?: (input: string) => boolean
 }

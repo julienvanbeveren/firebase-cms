@@ -9,6 +9,7 @@ import Label from "../../../components/helpers/Label";
 import content from "../../../config/content";
 import pluralize from "pluralize";
 import { FiPlus } from "react-icons/fi";
+import Table from "../../../components/table/Table";
 
 const Content: NextPage = () => {
   const router = useRouter();
@@ -43,6 +44,7 @@ const Content: NextPage = () => {
             icon={<FiPlus />}
           />
         </div>
+        <Table content={currentContentConfig} />
       </div>
     </>
   );
